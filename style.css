@@ -15,11 +15,13 @@ html {
   --color10: #ba2021;
 }
 
-section {
+#cocktail {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px;
   margin: 20px;
+}
+#section_third {
   background-color: var(--color4);
 }
 

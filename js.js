@@ -7,7 +7,7 @@ const options = {
 };
 
 //container til articles med en drink
-const section = document.querySelector("section");
+const section = document.querySelector("#cocktail");
 //tager fat i indholdet af html skabelon (article)
 const template = document.querySelector("template").content;
 
