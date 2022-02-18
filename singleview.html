@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- tilbageknap -->
+      <button>Tilbage</button>
+      <!-- Det der popper frem -->
+      <article id="singleview">
+        <img src="" alt="" />
+        <h2 class="navn"></h2>
+        <p class="beskrive"></p>
+        <p class="ingrediens"></p>
+        <p class="fremgangsmåde"></p>
+      </article>
+    </main>
+    <footer></footer>
+
+    <script>
+      //finder informationen fra den anden side
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+      console.log({ id });
+      let drink;
+
+      // NØGLE OG LINK TIL DATABASE
+      const url = `https://siptip-62ea.restdb.io/rest/cocktails/${id}`;
+      const key = "620f5f1734fd6215658587a4";
+
+      async function hentData() {
+        console.log("hentData");
+
+        const resspons = await fetch(url, {
+          method: "GET",
+          headers: {
+            "content-Type": "application/json",
+            "x-apikey": key,
+          },
+        });
+        drink = await resspons.json();
+        vis();
+      }
+      function vis() {
+        document.querySelector(".navn").textContent = drink.navn;
+        document.querySelector(".beskrive").textContent = drink.beskrive;
+        document.querySelector(".ingrediens").textContent = drink.ingrediens;
+        document.querySelector(".fremgangsmåde").textContent =
+          drink.fremgangsmåde;
+        document.querySelector("img").src = "img/" + mad.billednavn + ".jpg";
+      }
+      hentData();
+
+      document.querySelector("button").addEventListener("click", () => {
+        history.back();
+      });
+    </script>
+  </body>
+</html>
