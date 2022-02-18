@@ -1,6 +1,19 @@
 img {
   width: 100%;
 }
+
+html {
+  --color1: #fff5e1;
+  --color2: #f7d67f;
+  --color3: #f48520;
+  --color4: #faedea;
+  --color5: #f4acac;
+  --color6: #cbe0fc;
+  --color7: #6362ac;
+  --color8: #d8e2ae;
+  --color9: #94b7a2;
+  --color10: #ba2021;
+}
 section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -13,4 +26,14 @@ section {
 }
 button {
   cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-family: monarcha, serif;
+}
+
+p {
+  font-family: degular, sans-serif;
 }
