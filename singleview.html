@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cocktails</title>
     <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/btx8fkd.css"
   </head>
   <body>
@@ -17,7 +18,8 @@
       <article id="singleview">
         <img src="" alt="" />
         <h2 class="navn"></h2>
-        <p class="beskrive"></p>
+        <h3 class="kategori"></h3>
+        <p class="beskrivelse"></p>
         <p class="ingrediens"></p>
         <p class="fremgangsmåde"></p>
       </article>
@@ -50,11 +52,12 @@
       }
       function vis() {
         document.querySelector(".navn").textContent = drink.navn;
-        document.querySelector(".beskrive").textContent = drink.beskrive;
+        document.querySelector(".kategori").textContent = drink.kategori;
+        document.querySelector(".beskrivelse").textContent = drink.beskrivelse;
         document.querySelector(".ingrediens").textContent = drink.ingrediens;
         document.querySelector(".fremgangsmåde").textContent =
           drink.fremgangsmåde;
-        document.querySelector("img").src = "img/" + mad.billednavn + ".webp";
+        document.querySelector("img").src = "img/" + drink.billede + ".webp";
       }
       hentData();
 
