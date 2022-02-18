@@ -14,6 +14,7 @@ html {
   --color9: #94b7a2;
   --color10: #ba2021;
 }
+
 section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
