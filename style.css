@@ -20,6 +20,7 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px;
   margin: 20px;
+  background-color: var(--color4);
 }
 
 .valgt {
@@ -37,4 +38,26 @@ h3 {
 
 p {
   font-family: degular, sans-serif;
+}
+
+article {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  cursor: pointer;
+}
+article h2 {
+  color: var(--color10);
+  font-size: 1rem;
+}
+
+article h3 {
+  font-size: 2rem;
+}
+
+#singleview {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 10px 10px 20px 10px;
+  cursor: inherit;
 }
