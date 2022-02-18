@@ -1,7 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 img {
   width: 100%;
 }
-
 html {
   --color1: #fff5e1;
   --color2: #f7d67f;
@@ -13,6 +18,23 @@ html {
   --color8: #d8e2ae;
   --color9: #94b7a2;
   --color10: #ba2021;
+}
+
+h1,
+h2,
+h3 {
+  font-family: monarcha, serif;
+}
+
+p {
+  font-family: degular, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
 }
 
 #cocktail {
@@ -32,34 +54,41 @@ button {
   cursor: pointer;
 }
 
-h1,
-h2,
-h3 {
-  font-family: monarcha, serif;
-}
-
-p {
-  font-family: degular, sans-serif;
-}
-
-article {
+#forside {
   background-color: white;
   padding: 10px;
-  box-shadow: 10px 10px 5px #aaaaaa;
+  box-shadow: 5px 5px 5px #dbdbdb;
   cursor: pointer;
 }
 article h2 {
   color: var(--color10);
   font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
 article h3 {
   font-size: 2rem;
+  margin: 15px 0;
 }
 
+#single_first {
+  background-color: var(--color4);
+}
 #singleview {
-  max-width: 600px;
-  margin: 2em auto;
-  padding: 10px 10px 20px 10px;
   cursor: inherit;
+  margin: 20px;
+}
+#singleview .navn {
+  margin: 30px 20px 10px 20px;
+  color: var(--color10);
+}
+#singleview .kategori {
+  margin: 0px 20px 20px 20px;
+  color: black;
+  text-transform: inherit;
+}
+#singleview p {
+  margin: 20px;
+  padding: 10px 0px 70px 0px;
 }
