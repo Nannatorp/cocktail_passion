@@ -28,6 +28,7 @@ h3 {
 
 p {
   font-family: degular, sans-serif;
+  font-weight: lighter;
 }
 
 h1 {
@@ -39,10 +40,7 @@ h1 {
 
 #cocktail {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px;
   margin: 20px;
 }
@@ -67,6 +65,53 @@ h1 {
 #forside .navn {
   font-size: 2.2rem;
   font-weight: lighter;
+}
+/* ----------------IKONER-------------- */
+#section_second .ikoner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
+}
+figcaption {
+  font-family: degular, sans-serif;
+  font-weight: bold;
+}
+.ikoner p {
+  margin: 20px;
+}
+#money_2 {
+  grid-column: 1/2;
+  text-align: center;
+}
+#money_3 {
+  grid-column: 1/2;
+  text-align: center;
+}
+#shaker {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+#shaker_2 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  text-align: center;
+}
+#shaker_3 {
+  grid-column: 2/3;
+  text-align: center;
+}
+#people {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+#people_2 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  text-align: center;
+}
+#people_3 {
+  grid-column: 3/4;
+  text-align: center;
 }
 /* ----------------KNAPPER-------------- */
 .valgt {
@@ -98,10 +143,19 @@ button {
   padding: 10px 0px 70px 0px;
 }
 
-#singleview img {
-}
+/* ------------------MOBIL------------------*/
+/* #section_first {
+  display: grid;
+  grid-column: 1 / 4;
+  width: 100%;
+  height: 50vh;
+  background-image: url(img/splash.webp);
+  background-size: cover;
+  background-position: 30%;
+  transform: scale(3);
+} */
 
-/* ------------------IPAD - DESKTOP  ------------------*/
+/* ------------------IPAD------------------*/
 @media (min-width: 768px) {
   #singleview {
     display: grid;
@@ -129,3 +183,4 @@ button {
     padding: 10px 0px 70px 0px;
   } */
 }
+/* ------------------DESKTOP------------------*/
