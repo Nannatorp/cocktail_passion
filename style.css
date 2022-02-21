@@ -38,34 +38,20 @@ h1 {
   padding: 20px;
 }
 
-#cocktail {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 50px;
-  margin: 20px;
+a {
+  font-family: degular, sans-serif;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  text-align: right;
+  display: block;
+  margin: 10px 10px 30px 0px;
 }
-#section_third {
-  background-color: var(--color4);
-}
-
-#forside {
-  background-color: white;
-  padding: 20px;
-  box-shadow: 5px 5px 8px #cfcfcf;
-  cursor: pointer;
-}
-#forside .kategori {
-  color: var(--color10);
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-top: 10px;
-  font-weight: lighter;
+a:hover {
+  color: var(--color3);
 }
 
-#forside .navn {
-  font-size: 2.2rem;
-  font-weight: lighter;
-}
 /* ----------------IKONER-------------- */
 #section_second .ikoner {
   display: grid;
@@ -115,11 +101,55 @@ figcaption {
 }
 /* ----------------KNAPPER-------------- */
 .valgt {
-  color: blue;
+  color: var(--color3);
+  font-weight: bolder;
 }
 button {
   cursor: pointer;
+  border-radius: 50px;
+  border: 0.5px solid grey;
+  box-shadow: 5px 5px 8px #cfcfcf;
+  background-color: white;
+  font-family: degular, sans-serif;
+  font-weight: lighter;
+  font-size: 2rem;
+  padding: 20px;
+  margin: 5px;
+  text-transform: uppercase;
 }
+button:hover {
+  font-weight: bolder;
+}
+/* ----------------SEKTION 3 DRINKS-------------- */
+#cocktail {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  margin: 20px;
+}
+#section_third {
+  background-color: var(--color4);
+}
+
+#forside {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 5px 5px 8px #cfcfcf;
+  cursor: pointer;
+}
+#forside .kategori {
+  color: var(--color10);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+#forside .navn {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+
 /* ------------------SINGLEVIEW SIDE-------------------- */
 #single_first {
   background-color: var(--color4);
