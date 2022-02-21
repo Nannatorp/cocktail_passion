@@ -47,31 +47,32 @@ h1 {
   background-color: var(--color4);
 }
 
+#forside {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 5px 5px 8px #cfcfcf;
+  cursor: pointer;
+}
+#forside .kategori {
+  color: var(--color10);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+#forside .navn {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+/* ----------------KNAPPER-------------- */
 .valgt {
   color: blue;
 }
 button {
   cursor: pointer;
 }
-
-#forside {
-  background-color: white;
-  padding: 10px;
-  box-shadow: 5px 5px 5px #dbdbdb;
-  cursor: pointer;
-}
-article h2 {
-  color: var(--color10);
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
-article h3 {
-  font-size: 2rem;
-  margin: 15px 0;
-}
-
+/* ------------------SINGLEVIEW SIDE-------------------- */
 #single_first {
   background-color: var(--color4);
 }
