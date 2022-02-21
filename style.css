@@ -39,7 +39,10 @@ h1 {
 
 #cocktail {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  );
   gap: 50px;
   margin: 20px;
 }
@@ -75,6 +78,7 @@ button {
 /* ------------------SINGLEVIEW SIDE-------------------- */
 #single_first {
   background-color: var(--color4);
+  padding-top: 10rem;
 }
 #singleview {
   cursor: inherit;
@@ -92,4 +96,36 @@ button {
 #singleview p {
   margin: 20px;
   padding: 10px 0px 70px 0px;
+}
+
+#singleview img {
+}
+
+/* ------------------IPAD - DESKTOP  ------------------*/
+@media (min-width: 768px) {
+  #singleview {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+    margin: 0%;
+  }
+
+  #singleview img {
+    height: 100%;
+    width: 70%;
+  }
+
+  /* #singleview .navn {
+    margin: 30px 20px 10px 20px;
+    color: var(--color10);
+  }
+  #singleview .kategori {
+    margin: 0px 20px 20px 20px;
+    color: black;
+    text-transform: inherit;
+  }
+  #singleview p {
+    margin: 20px;
+    padding: 10px 0px 70px 0px;
+  } */
 }
