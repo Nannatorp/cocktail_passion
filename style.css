@@ -79,10 +79,7 @@ figcaption {
 /* ----------------SEKTION 3 DRINKS-------------- */
 #cocktail {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px;
   margin: 20px;
 }
@@ -149,32 +146,57 @@ figcaption {
   background-color: var(--color9);
 }
 
-/* ------------------MOBIL------------------*/
-@media (max-width: 767px) {
-  #section_first .splashimg {
-    /* display: grid; */
-    /* grid-column: 1 / 4; */
-    overflow: hidden;
-    width: 100%;
-    height: 50vh;
-    /* background-image: url(img/splash.webp); */
-    background-size: cover;
-    background-position: 30%;
-    transform: scale(3);
-    z-index: -1;
-  }
-  #section_first {
-    overflow: hidden;
-  }
+/* ------------------SPLASHBILLEDE------------------*/
 
-  /* #section_second {
-    width: fit-content;
-  } */
+.splashimg {
+  overflow: hidden;
+  width: 100%;
+  height: 80vh;
+  background-image: url(img/splash.webp);
+  background-size: cover;
+  background-position: 40%;
+  transform: scale(2);
+}
+#section_first {
+  display: grid;
+  overflow: hidden;
+  height: 600px;
+}
+
+.splashtxt,
+.splashimg {
+  grid-area: 1/1;
+}
+
+.splashtxt {
+  z-index: 1;
+  text-align: center;
+  justify-self: end;
+  margin-top: 9rem;
+  margin-right: 2.5rem;
+  max-width: 20ch;
+  font-size: 1.3rem;
 }
 
 /* ------------------IPAD------------------*/
 @media (min-width: 768px) {
+  /* ---SPLASHBILLEDE--- */
+  .splashimg {
+    width: 100%;
+    height: 80vh;
+    background-position: 70%;
+    transform: scale(1.5);
+  }
+
+  .splashtxt {
+    margin-top: 12rem;
+    margin-right: 5rem;
+    max-width: 30ch;
+    font-size: 1.5rem;
+  }
+
   /* ---IKONER--- */
+
   figcaption {
     font-size: 1.5rem;
   }
@@ -215,9 +237,6 @@ figcaption {
   #singleview .beskrivelse {
     margin: -100px 30px 0px 30px;
   }
-  /* #single_second {
-    background-image: url();
-  } */
   .ingrediens {
     padding: 20px;
   }
@@ -227,6 +246,19 @@ figcaption {
 }
 /* ------------------DESKTOP------------------*/
 @media (min-width: 1000px) {
+  /* ---SPLASHBILLEDE--- */
+  .splashimg {
+    height: 100vh;
+    transform: scale(1);
+  }
+
+  .splashtxt {
+    margin-top: 15rem;
+    margin-right: 7rem;
+    max-width: 30ch;
+    font-size: 2rem;
+  }
+
   /* ---IKONER--- */
   figcaption {
     font-size: 1.7rem;
