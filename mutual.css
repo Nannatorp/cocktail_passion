@@ -67,12 +67,12 @@ p {
   font-weight: lighter;
 }
 
-h1 {
+/* h1 {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
   padding: 20px;
-}
+} */
 
 a {
   font-family: degular, sans-serif;
