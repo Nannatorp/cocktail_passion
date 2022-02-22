@@ -163,10 +163,7 @@ figcaption {
 /* ----------------SEKTION 3 DRINKS-------------- */
 #cocktail {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px;
   margin: 20px;
 }
@@ -235,7 +232,7 @@ figcaption {
 
 /* ------------------MOBIL------------------*/
 @media (max-width: 767px) {
-  /* #section_first {
+  #section_first {
     display: grid;
     grid-column: 1 / 4;
     width: 100%;
@@ -244,7 +241,8 @@ figcaption {
     background-size: cover;
     background-position: 30%;
     transform: scale(3);
-  } */
+    z-index: -1;
+  }
 
   /* ------------------IPAD - DESKTOP  ------------------*/
   #singleview .navn {

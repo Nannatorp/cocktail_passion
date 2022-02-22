@@ -26,7 +26,9 @@
       <section id="single_second">
         <!-- Det der popper frem -->
         <article id="opskrift">
+          <p class="labelOne"></p>
           <p class="ingrediens"></p>
+          <p class="labelTwo"></p>
           <p class="fremgangsmåde"></p>
         </article>
       </section>
@@ -61,7 +63,9 @@
         document.querySelector(".navn").textContent = drink.navn;
         document.querySelector(".kategori").textContent = drink.kategori;
         document.querySelector(".beskrivelse").textContent = drink.beskrivelse;
+        document.querySelector(".labelOne").textContent = drink.labelOne;
         document.querySelector(".ingrediens").textContent = drink.ingrediens;
+        document.querySelector(".labelTwo").textContent = drink.labelTwo;
         document.querySelector(".fremgangsmåde").textContent =
           drink.fremgangsmåde;
         document.querySelector("img").src = "img/" + drink.billede + ".webp";
