@@ -4,6 +4,86 @@
   box-sizing: border-box;
 }
 
+/* --------------------------- HEADER MOBIL START -------------------------- */
+
+/* --------------------------- HEADER MOBIL START -------------------------- */
+
+/* --------------------------- FOOOTER IPAD + DESKTOP START -------------------------- */
+
+header {
+  background-color: #ffff;
+  /* overflow: hidden; */
+}
+
+@media (min-width: 1000px) {
+  nav {
+    height: 130px;
+    /* padding-top: 20px; */
+  }
+
+  li {
+    margin-top: 90px;
+  }
+
+  li a {
+    font-size: 30px;
+    margin: 30px;
+    font-weight: lighter;
+  }
+
+  nav img {
+    max-width: 60%;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    height: 120px;
+    padding-top: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .nav_left {
+    grid-column: 1/2;
+    place-self: start end;
+    margin-top: 10px;
+  }
+
+  .nav_right {
+    grid-column: 3/4;
+    place-self: start start;
+    margin-top: 10px;
+  }
+  li {
+    float: left;
+    margin-top: 30px;
+  }
+
+  li a {
+    font-size: 20px;
+    margin: 20px;
+    font-weight: lighter;
+  }
+
+  nav img {
+    grid-column: 2/3;
+    place-self: center;
+    width: 80%;
+    z-index: 1;
+  }
+}
+
+/* --------------------------- FOOOTER IPAD + DESKTOP START -------------------------- */
+
 /* --------------------------- FOOOTER MOBIL START -------------------------- */
 footer {
   margin: 30px;
@@ -66,13 +146,6 @@ p {
   font-family: degular, sans-serif;
   font-weight: lighter;
 }
-
-/* h1 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 20px;
-} */
 
 a {
   font-family: degular, sans-serif;
