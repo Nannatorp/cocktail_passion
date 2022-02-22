@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*––––––––––––––––––––––Mobil version–––––––––––––––––––*/
+
+#section_1 {
+  margin: 3rem;
+  margin-top: 8rem;
+  margin-bottom: 11rem;
+}
+
+/* Styling af email-formular */
+input,
+button {
+  border-radius: 10px;
+}
+
+/* Styling af blade m. css animationer */
+
+.blad_top_container {
+  width: 200%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: -10rem;
+  left: -5rem;
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
+.blad_top_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blad_top.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.blad_bottom_container {
+  width: 208%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: 15rem;
+  left: -20rem;
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
+.blad_bottom_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blad_bottom.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+}
+
+/*––––––––––––––––I-pad version–––––––––––––––––*/
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #section_1 {
+    grid-column: 1/2;
+  }
+  #section_2 {
+    grid-column: 2/3;
+    overflow: hidden;
+  }
+
+  /* Styling af blade m. css animationer */
+
+  .blad_top_container {
+    width: 50%;
+    aspect-ratio: 2/3;
+    position: absolute;
+    top: 0rem;
+    left: 15rem;
+    transform: rotate(-13deg);
+    z-index: -1;
+  }
+
+  .blad_bottom_container {
+    width: 60%;
+    aspect-ratio: 2/3;
+    position: absolute;
+    top: 19rem;
+    left: -18rem;
+    transform: rotate(1deg);
+    z-index: -1;
+  }
+}
+
+/*––––––––––––––––Desktop version–––––––––––––––––*/
+@media (min-width: 1000px) {
+  /* Styling af blade m. css animationer */
+  .blad_top_container {
+    width: 50%;
+    aspect-ratio: 2/3;
+    position: absolute;
+    top: 0rem;
+    left: 21rem;
+    transform: rotate(-29deg);
+    z-index: -1;
+  }
+
+  .blad_bottom_container {
+    width: 60%;
+    aspect-ratio: 2/3;
+    position: absolute;
+    top: 19rem;
+    left: -16rem;
+    transform: rotate(1deg);
+    z-index: -1;
+  }
+}
