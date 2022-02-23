@@ -54,14 +54,48 @@ figcaption {
   grid-column: 3/4;
   text-align: center;
 }
-/* ----------------KNAPPER-------------- */
+/* ----------------KNAPPER DRAGABLE KATEGORI MOBIL-------------- */
+
 .valgt {
   color: var(--color3);
   font-weight: bolder;
+  background: linear-gradient(135deg, rgba(95, 0, 0, 0.14), rgb(251, 242, 242));
 }
 
-#section_third button {
+#section_third {
+  height: auto;
+}
+.slider {
+  /* position: absolute; */
+  left: 10%;
+  top: 30%;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: var(---color4);
+}
+
+.slider_inner {
+  /* position: absolute; */
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 200%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1px;
+  pointer-events: none;
+  transition: 0s ease-in;
+}
+
+.drag_cat {
+  height: 100%;
+  padding: 1rem;
+}
+
+#section_third .slider_inner .drag_cat button {
   cursor: pointer;
+  pointer-events: auto;
   border-radius: 50px;
   border: 0.5px solid grey;
   box-shadow: 5px 5px 8px #cfcfcf;
@@ -70,12 +104,22 @@ figcaption {
   font-weight: lighter;
   font-size: 1.5rem;
   padding: 20px;
-  margin: 5px;
+  /* margin: 5px; */
   text-transform: uppercase;
 }
-#section_third button:hover {
+#section_third .slider_inner .drag_cat button:hover {
   font-weight: bolder;
 }
+#single_first button {
+  position: absolute;
+  cursor: pointer;
+  color: var(--color3);
+  font-size: 4rem;
+  border: none;
+  background-color: Transparent;
+  margin: 10px;
+}
+
 /* ----------------SEKTION 3 DRINKS-------------- */
 #cocktail {
   display: grid;
@@ -110,15 +154,6 @@ figcaption {
 #single_first {
   background-color: var(--color4);
 }
-#single_first button {
-  position: absolute;
-  cursor: pointer;
-  color: var(--color3);
-  font-size: 4rem;
-  border: none;
-  background-color: Transparent;
-  margin: 10px;
-}
 
 #singleview {
   cursor: inherit;
@@ -126,24 +161,40 @@ figcaption {
 #singleview .navn {
   color: var(--color10);
   font-size: 2.8rem;
+  margin: 50px 0px 0px 40px;
 }
 #singleview .kategori {
   color: black;
   text-transform: inherit;
   font-size: 1.6rem;
+  margin: 0px 0px 0px 40px;
 }
 #singleview .beskrivelse {
   line-height: 1.3;
   font-size: 1.1rem;
+  margin: 30px 0px 0px 40px;
+  padding-bottom: 100px;
 }
 #opskrift {
   margin: 40px;
 }
 .ingrediens {
   background-color: var(--color9);
+  padding: 30px;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
 }
 .fremgangsmåde {
   background-color: var(--color9);
+  padding: 30px;
+  font-size: 1.1rem;
+}
+.labelOne,
+.labelTwo {
+  background-color: var(--color9);
+  padding: 30px 30px 0px 30px;
+  font-size: 1.6rem;
+  font-weight: bolder;
 }
 
 /* ------------------SPLASHBILLEDE------------------*/
@@ -205,12 +256,65 @@ figcaption {
     margin: auto;
   }
 
-  a {
-    margin: 10px 100px 30px 0px;
+  .about_os_link {
+    margin: 10px 70px 30px 0px;
   }
-  /* ---KNAPPER--- */
-  /* button {
-  } */
+  /* ---KNAPPER kategori tablet--- */
+
+  #section_third {
+    height: auto;
+  }
+
+  .slider {
+    /* position: absolute; */
+    padding: 1rem;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    background-color: var(--color4);
+  }
+
+  .slider_inner {
+    /* position: absolute; */
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    pointer-events: none;
+    transition: 0s ease-in;
+  }
+
+  .drag_cat {
+    height: 100%;
+    padding: 0;
+    display: flex;
+  }
+
+  #section_third .slider_inner .drag_cat button {
+    cursor: pointer;
+    pointer-events: auto;
+    border-radius: 0px;
+    border: 0.2px solid grey;
+    box-shadow: none;
+    background-color: white;
+    font-family: degular, sans-serif;
+    font-weight: lighter;
+    font-size: 1rem;
+    /* padding: 1rem; */
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  #section_third .slider_inner .drag_cat button:hover {
+    font-weight: bolder;
+    color: var(--color3);
+  }
+
   /* ---SINGLEVIEW--- */
   #singleview {
     display: grid;
@@ -221,11 +325,6 @@ figcaption {
     grid-column: 1 / 4;
     grid-row: 1/4;
   }
-  #opskrift {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
   #singleview .navn {
     place-self: end start;
     margin-left: 30px;
@@ -233,12 +332,23 @@ figcaption {
   #singleview .kategori {
     place-self: start;
     margin-left: 30px;
+    font-size: 1.1rem;
   }
   #singleview .beskrivelse {
-    margin: -100px 30px 0px 30px;
+    margin: -50px 30px 0px 30px;
+    font-size: 1.3rem;
   }
+  #opskrift {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    margin-top: 150px;
+  }
+
   .ingrediens {
     padding: 20px;
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
   .fremgangsmåde {
     padding: 20px;
@@ -267,9 +377,16 @@ figcaption {
     max-width: 600px;
     margin: auto;
   }
-  /* ---KNAPPER--- */
-  /* button {
-  } */
+  .about_os_link {
+    margin: 10px 180px 30px 0px;
+  }
+  /* --- KNAPPER kategori desktop--- */
+  .drag_cat {
+    height: 100%;
+    padding: 0;
+    display: grid;
+  }
+
   /* ---SINGLEVIEW--- */
   #singleview {
     display: grid;
@@ -282,27 +399,30 @@ figcaption {
   }
   #singleview .navn {
     place-self: end start;
-    margin: 50px 50px 0px 50px;
+    margin: 50px 50px 0px 70px;
   }
   #singleview .kategori {
     place-self: start;
-    margin: 0px 50px 0px 50px;
+    margin: 0px 50px 0px 70px;
+    font-size: 1.3rem;
   }
   #singleview .beskrivelse {
-    margin: -150px 100px 0px 50px;
+    margin: -100px 100px 0px 70px;
   }
   #opskrift {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-column-gap: 30px;
+    margin-top: 100px;
   }
-  /* #single_second {
-    background-image: url();
-  } */
   .ingrediens {
-    padding: 50px;
+    padding: 30px 50px 50px 50px;
   }
   .fremgangsmåde {
-    padding: 50px;
+    padding: 30px 50px 50px 50px;
+  }
+  .labelOne,
+  .labelTwo {
+    padding: 50px 50px 0px 50px;
   }
 }

@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cocktails</title>
     <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="mutual.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/btx8fkd.css" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon1.svg">
+  </head>
   </head>
   <body>
     <header></header>
@@ -64,9 +67,9 @@
         document.querySelector(".kategori").textContent = drink.kategori;
         document.querySelector(".beskrivelse").textContent = drink.beskrivelse;
         document.querySelector(".labelOne").textContent = drink.labelOne;
-        document.querySelector(".ingrediens").textContent = drink.ingrediens;
+        document.querySelector(".ingrediens").innerHTML = drink.ingrediens;
         document.querySelector(".labelTwo").textContent = drink.labelTwo;
-        document.querySelector(".fremgangsmåde").textContent =
+        document.querySelector(".fremgangsmåde").innerHTML =
           drink.fremgangsmåde;
         document.querySelector("img").src = "img/" + drink.billede + ".webp";
       }
