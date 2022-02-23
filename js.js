@@ -106,6 +106,7 @@ function vis() {
 }
 hentData();
 
+// ------- BURGER FUNKTION TIL ÅBNE OG LUKKE I MOBILE------------
 function openNav() {
   document.getElementById(
     "myNav"
@@ -117,4 +118,94 @@ function closeNav() {
   document.getElementById(
     "myNav"
   ).style.width = "0%";
+}
+
+// -------------- kategori drag funktion i mobil
+// https://www.youtube.com/watch?v=KHGc7eZyxKY
+
+let slider =
+  document.querySelector(".slider");
+let innerSlider =
+  document.querySelector(
+    ".slider_inner"
+  );
+
+let pressed = false;
+let startx;
+let x;
+
+slider.addEventListener(
+  "mousedown",
+  (e) => {
+    pressed = true;
+    startx =
+      e.offsetX -
+      innerSlider.offsetLeft;
+    // console.log(innerSlider.offsetLeft);
+    slider.style.cursor = "grabbing";
+  }
+);
+
+slider.addEventListener(
+  "mouseenter",
+  () => {
+    slider.style.cursor = "grab";
+  }
+);
+
+// slider.addEventListener(
+//   "mouseleave",
+//   () => {
+//     slider.style.cursor = "default";
+//   }
+// );
+
+slider.addEventListener(
+  "mouseup",
+  () => {
+    slider.style.cursor = "grab";
+  }
+);
+
+window.addEventListener(
+  "mouseup",
+  () => {
+    pressed = false;
+  }
+);
+
+slider.addEventListener(
+  "mousemove",
+  (e) => {
+    if (!pressed) return;
+    e.preventDefault();
+
+    x = e.offsetX;
+
+    innerSlider.style.left = `${
+      x - startx
+    }px`;
+    // console.log(startx);
+    checkboundray();
+  }
+);
+
+function checkboundray() {
+  let outer =
+    slider.getBoundingClientRect();
+  let inner =
+    innerSlider.getBoundingClientRect();
+  console.log(outer);
+
+  if (
+    parseInt(innerSlider.style.left) > 0
+  ) {
+    innerSlider.style.left = "0 px";
+  } else if (
+    inner.right < outer.right
+  ) {
+    innerSlider.style.left = `-${
+      inner.width - outer.width
+    }px`;
+  }
 }

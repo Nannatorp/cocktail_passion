@@ -16,6 +16,7 @@
   right: 30px;
   font-size: 70px;
   color: #f48520;
+  z-index: 3;
 }
 header span {
   width: 60%;
@@ -31,7 +32,7 @@ header img {
   height: 100%;
   width: 0;
   position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
+  z-index: 3; /* Sit on top */
   right: 0;
   top: 0;
 
@@ -59,6 +60,12 @@ nav.overlay_content ul li {
 .overlay_content ul li a {
   font-size: 30px;
   text-align: left;
+}
+.burger_header span img {
+  position: fixed;
+  width: 12%;
+  top: 7%;
+  z-index: 2;
 }
 
 /* --------------------------- HEADER MOBIL SLUT -------------------------- */
