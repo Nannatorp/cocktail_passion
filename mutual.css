@@ -179,13 +179,14 @@ header {
 
 /* --------------------------- FOOOTER MOBIL START -------------------------- */
 footer {
-  margin: 30px;
+  background-color: white;
 }
 
 .foot_logo {
   display: flex;
   justify-content: center;
   width: auto;
+  padding-top: 20px;
 }
 
 .foot_logo img {
