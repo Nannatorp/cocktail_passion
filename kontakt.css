@@ -198,14 +198,4 @@ input {
     left: -26rem;
     transform: rotate(1deg);
     z-index: -1;
-  } */
-
-/* .mapouter {
-    display: grid;
-  }
-  .gmap_canvas {
-    justify-self: end;
-    margin-top: 3.5rem;
-    padding: 2rem;
-  }
-} */
+  } }
