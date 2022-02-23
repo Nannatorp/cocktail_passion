@@ -52,12 +52,7 @@ h1 {
 }
 
 input {
-  background-color: rgba(
-    51,
-    51,
-    51,
-    0.05
-  );
+  background-color: rgb(255, 255, 255);
   border-radius: 8px;
   border-width: 0;
   cursor: pointer;
@@ -65,17 +60,19 @@ input {
   line-height: 20px;
   margin: 0;
   padding: 10px 12px;
+  border: 0.2px solid grey;
 }
 
 /* Styling af blade m. css animationer */
-/* .blad_top_container {
-  width: 100%;
+.blad_top_container {
+  width: 130%;
   aspect-ratio: 2/3;
-  position: absolute;
-  top: -10rem;
-  left: -5rem;
+  position: fixed;
+  top: 1rem;
+  left: 5rem;
   transform: rotate(-1deg);
   z-index: -1;
+  overflow: hidden;
 }
 
 .blad_top_sprite {
@@ -89,7 +86,7 @@ input {
 .blad_bottom_container {
   width: 208%;
   aspect-ratio: 2/3;
-  position: absolute;
+  position: fixed;
   top: 15rem;
   left: -20rem;
   transform: rotate(-1deg);
@@ -102,7 +99,7 @@ input {
   background-image: url(img/blad_bottom.svg);
   background-size: 100%;
   background-repeat: no-repeat;
-} */
+}
 
 /*––––––––––––––––I-pad version–––––––––––––––––*/
 
@@ -146,10 +143,8 @@ input {
     display: flex;
     gap: 10px;
   }
-}
-
-/* Styling af blade m. css animationer */
-/* .blad_top_container {
+  /* Styling af blade m. css animationer */
+  .blad_top_container {
     width: 50%;
     aspect-ratio: 2/3;
     position: absolute;
@@ -157,9 +152,9 @@ input {
     left: 15rem;
     transform: rotate(-13deg);
     z-index: -1;
-  } */
+  }
 
-/* .blad_bottom_container {
+  .blad_bottom_container {
     width: 60%;
     aspect-ratio: 2/3;
     position: absolute;
@@ -168,34 +163,32 @@ input {
     transform: rotate(1deg);
     z-index: -1;
   }
-
-
+}
 
 /*––––––––––––––––Desktop version–––––––––––––––––*/
 @media (min-width: 1000px) {
-  */ .gmap_canvas {
+  .gmap_canvas {
     display: flex;
     place-self: end;
   }
-}
-
-/* Styling af blade m. css animationer */
-/* .blad_top_container {
-    width: 50%;
-    aspect-ratio: 2/3;
+  /* Styling af blade m. css animationer */
+  .blad_top_container {
+    width: 45%;
+    aspect-ratio: 1/1;
     position: absolute;
-    top: 4rem;
+    top: 0rem;
     left: 35rem;
-    transform: rotate(-15deg);
+    transform: rotate(-40deg);
     z-index: -1;
   }
 
   .blad_bottom_container {
-    width: 41%;
-    aspect-ratio: 2/3;
+    width: 47%;
+    aspect-ratio: 1/1;
     position: absolute;
-    top: 17rem;
-    left: -26rem;
-    transform: rotate(1deg);
+    top: 2rem;
+    left: -23rem;
+    transform: rotate(64deg);
     z-index: -1;
-  } }
+  }
+}
