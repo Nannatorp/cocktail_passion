@@ -23,7 +23,6 @@ button {
 }
 
 /* Styling af blade m. css animationer */
-
 .blad_top_container {
   width: 200%;
   aspect-ratio: 2/3;
@@ -60,6 +59,8 @@ button {
   background-repeat: no-repeat;
 }
 
+/* Styling af Google Maps */
+
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
@@ -81,12 +82,11 @@ button {
   }
 
   /* Styling af blade m. css animationer */
-
   .blad_top_container {
     width: 50%;
     aspect-ratio: 2/3;
     position: absolute;
-    top: 0rem;
+    top: 8rem;
     left: 15rem;
     transform: rotate(-13deg);
     z-index: -1;
@@ -96,33 +96,59 @@ button {
     width: 60%;
     aspect-ratio: 2/3;
     position: absolute;
-    top: 19rem;
-    left: -18rem;
+    top: 24rem;
+    left: -22rem;
     transform: rotate(1deg);
     z-index: -1;
+  }
+
+  .mapouter {
+    display: grid;
+  }
+  .gmap_canvas {
+    justify-self: end;
+    margin-top: 3.5rem;
+    padding: 2rem;
   }
 }
 
 /*––––––––––––––––Desktop version–––––––––––––––––*/
 @media (min-width: 1000px) {
+  #section_1 {
+    justify-self: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
   /* Styling af blade m. css animationer */
   .blad_top_container {
     width: 50%;
     aspect-ratio: 2/3;
     position: absolute;
-    top: 0rem;
-    left: 21rem;
-    transform: rotate(-29deg);
+    top: 4rem;
+    left: 35rem;
+    transform: rotate(-15deg);
     z-index: -1;
   }
 
   .blad_bottom_container {
-    width: 60%;
+    width: 41%;
     aspect-ratio: 2/3;
     position: absolute;
-    top: 19rem;
-    left: -16rem;
+    top: 17rem;
+    left: -26rem;
     transform: rotate(1deg);
     z-index: -1;
+  }
+
+  .mapouter {
+    display: grid;
+  }
+  .gmap_canvas {
+    justify-self: end;
+    margin-top: 3.5rem;
+    padding: 2rem;
   }
 }
