@@ -256,10 +256,10 @@ figcaption {
     margin: auto;
   }
 
-  a {
-    margin: 10px 100px 30px 0px;
+  .about_os_link {
+    margin: 10px 70px 30px 0px;
   }
-  /* -------------------------KNAPPER kategori tablet--- */
+  /* ---KNAPPER kategori tablet--- */
 
   #section_third {
     height: auto;
@@ -376,6 +376,9 @@ figcaption {
   #section_second .ikoner {
     max-width: 600px;
     margin: auto;
+  }
+  .about_os_link {
+    margin: 10px 180px 30px 0px;
   }
   /* --- KNAPPER kategori desktop--- */
   .drag_cat {
