@@ -22,20 +22,33 @@
   </template>
 
     <header>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-      <nav>
-        <ul class="nav_left">
-          <li> <a href="index.html">Forside</a> </li>
-          <li><a href="section_thrid">Opskrifter</a></li>
-          </ul>
-          <img src="img/orange_logo.svg" alt="header_logo">
-          <ul class="nav_right">
-          <li><a href="om.html">Om os</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+        <!-- <div class="overlay_content"> -->
+        
 
-    </header>
+          <nav class="overlay_content">
+            <ul class="nav_left">
+              <li> <a href="index.html">Forside</a> </li>
+              <li><a href="#section_thrid">Opskrifter</a></li>
+              </ul>
+              <img class="desk_logo" src="img/orange_logo.svg" alt="header_logo">
+              <ul class="nav_right">
+              <li><a href="om.html">Om os</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            
+
+          </nav>
+
+       </div>
+
+        <div class="burger_header">
+          <img src="img/orange_logo.svg" alt="">
+          <span onclick="openNav()"><img src="img/burger.svg" alt=""></span>
+        </div>
+      </header>
 
 
     <main> 
