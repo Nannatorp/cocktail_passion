@@ -8,7 +8,7 @@
 .burger_header {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  margin: 20px;
+  margin: 10px;
 }
 .overlay .closebtn {
   position: absolute;
@@ -25,7 +25,7 @@ header span {
 }
 
 header img {
-  width: 100%;
+  width: 90%;
 }
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -41,6 +41,77 @@ header img {
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
+.logo_container {
+  width: 30%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: 2rem;
+  left: 8rem;
+  z-index: -1;
+}
+
+.logo_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/orange_logo.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.burgerblad_top_container {
+  width: 130%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+  transform: rotate(-1deg);
+  z-index: -2;
+  overflow: hidden;
+}
+
+.burgerblad_top_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blad_top.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.burgerblad_bottom_container {
+  width: 159%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: -8rem;
+  left: -28rem;
+  transform: rotate(112deg);
+  z-index: -2;
+}
+
+.burgerblad_bottom_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blad_bottom.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.burgerblad_right_container {
+  width: 122%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: 21rem;
+  left: 16rem;
+  transform: rotate(279deg);
+  z-index: -2;
+}
+
+.burgerblad_right_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blad_right.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .desk_logo {
   visibility: hidden;
   width: 0%;
@@ -48,23 +119,34 @@ header img {
   margin: 0%;
 }
 
+ul.nav_left {
+  display: grid;
+  gap: 10px;
+  padding-top: 85px;
+}
+ul.nav_right {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
 .overlay_content {
   height: 70vh;
   display: grid;
   place-content: center;
-  padding-top: 40px;
 }
 nav.overlay_content ul li {
   list-style: none;
 }
 .overlay_content ul li a {
   font-size: 30px;
-  text-align: left;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 17px;
 }
 .burger_header span img {
   position: fixed;
   width: 12%;
-  top: 7%;
+  top: 6%;
   z-index: 2;
 }
 
@@ -74,17 +156,17 @@ nav.overlay_content ul li {
 
 header {
   background-color: #ffff;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   #myNav.overlay {
     height: 20vh;
   }
 
   li a {
     font-size: 30px;
-    /* margin: 30px; */
+    margin: 30px;
     font-weight: lighter;
   }
 
@@ -95,22 +177,24 @@ header {
   }
   nav.overlay_content {
     padding-top: 1rem;
-    /* height: 20vh; */
+    height: 20vh;
   }
-}
+}  */
 
 @media (min-width: 768px) {
   #myNav.overlay {
     width: 100%;
     position: relative;
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow: hidden; /* Disable horizontal scroll */
   }
+
   .overlay_content {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     width: 100%;
     padding-top: 0%;
-    height: 17vh;
+    height: 15vh;
+    padding-left: 23px;
   }
 
   ul {
@@ -120,49 +204,60 @@ header {
     overflow: hidden;
   }
 
-  .nav_left {
+  ul.nav_left {
     grid-column: 1/2;
     place-self: start end;
     margin-top: 10px;
+    display: flex;
+    gap: 0;
+    padding: 0%;
+    place-self: end;
   }
 
-  .nav_right {
+  ul.nav_right {
     grid-column: 3/4;
     place-self: start start;
     margin-top: 10px;
+    display: flex;
+    gap: 0;
+    padding: 0%;
+    place-self: end start;
   }
-  li {
-    float: left;
-    margin-top: 30px;
-  }
+
+  /* --KALD ANDET SÅ DET IKKE PÅVIRKER SINGLE------- */
+  /* ------  */
 
   .overlay_content ul li a {
     font-size: 25px;
     margin: 20px;
-    font-weight: lighter;
   }
 
   .overlay_content img.desk_logo {
     grid-column: 2/3;
-    place-self: center;
-    width: 100%;
+    place-self: start center;
+    width: 80%;
     height: 100%;
     z-index: 99;
     visibility: visible;
   }
 
+  /* Mobil forside logo skjul */
   .burger_header {
     visibility: hidden;
     width: 0;
     height: 0;
     margin: 0;
   }
+
+  /* mobil luk knap i burgermenu skjul */
   .overlay .closebtn {
     visibility: hidden;
     width: 0;
     height: 0;
     margin: 0;
   }
+
+  /* mobil åbenknap i burgermenu skjul */
   header span {
     visibility: hidden;
     width: 0;
@@ -170,8 +265,58 @@ header {
     margin: 0;
   }
 
-  .burger_header img {
+  /* mobil logo i åben burger skjul */
+  .burger_logo {
     visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  /* mobil blade i åben burger skjul */
+  .burger_blade {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  .burgerblad_top_container {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .burgerblad_top_sprite {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  .burgerblad_bottom_container {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .burgerblad_bottom_sprite {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .burgerblad_right_container {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .burgerblad_right_sprite {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
   }
 }
 
@@ -236,7 +381,8 @@ h3 {
   font-weight: lighter;
 }
 
-p {
+p,
+li {
   font-family: degular, sans-serif;
   font-weight: lighter;
 }

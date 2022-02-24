@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cocktails</title>
+    <title> SIP TIP | OPSKRIFT</title>
     <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="mutual.css" />
     <link rel="stylesheet" href="style.css" />
@@ -13,7 +13,7 @@
   </head>
   </head>
   <body>
-    <header></header>
+  
     <main>
       <section id="single_first">
         <!-- tilbageknap -->
@@ -30,13 +30,46 @@
         <!-- Det der popper frem -->
         <article id="opskrift">
           <p class="labelOne"></p>
-          <p class="ingrediens"></p>
+          <ul class="ingrediens"></ul>
           <p class="labelTwo"></p>
-          <p class="fremgangsmåde"></p>
+          <ul class="fremgangsmåde"></ul>
         </article>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="foot_logo">
+        <img
+          src="img/lilla_logo.svg"
+          alt=""
+        />
+      </div>
+      <div class="foot_icon">
+        <img
+          src="img/fb_icon.svg"
+          alt=""
+        />
+        <img
+          src="img/ig_icon.svg"
+          alt=""
+        />
+        <img
+          src="img/twitter_icon.svg"
+          alt=""
+        />
+      </div>
+      <div class="foot_txt">
+        <p>
+          Adresse <br />
+          Guldberggade 29n <br />
+          2200 København K
+        </p>
+        <p>
+          Kontakt <br />
+          siptip@info.dk <br />
+          +45 4646 0000
+        </p>
+      </div>
+    </footer>
 
     <script>
       //finder informationen fra den anden side
@@ -63,6 +96,7 @@
         vis();
       }
       function vis() {
+        console.log(drink)
         document.querySelector(".navn").textContent = drink.navn;
         document.querySelector(".kategori").textContent = drink.kategori;
         document.querySelector(".beskrivelse").textContent = drink.beskrivelse;

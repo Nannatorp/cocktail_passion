@@ -66,50 +66,31 @@ figcaption {
   height: auto;
 }
 .slider {
-  /* position: absolute; */
-  left: 10%;
-  top: 30%;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  background-color: var(---color4);
+  overflow: scroll;
 }
 
 .slider_inner {
-  /* position: absolute; */
-  top: 0%;
-  left: 0%;
-  height: 100%;
-  width: 200%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 1px;
-  pointer-events: none;
-  transition: 0s ease-in;
 }
 
-.drag_cat {
-  height: 100%;
-  padding: 1rem;
-}
-
-#section_third .slider_inner .drag_cat button {
+#section_third .slider button {
   cursor: pointer;
-  pointer-events: auto;
-  border-radius: 50px;
   border: 0.5px solid grey;
   box-shadow: 5px 5px 8px #cfcfcf;
   background-color: white;
-  font-family: degular, sans-serif;
-  font-weight: lighter;
-  font-size: 1.5rem;
-  padding: 20px;
-  /* margin: 5px; */
+  font-size: 1rem;
+  padding: 21px;
+  margin: 5px;
   text-transform: uppercase;
+  height: 82%;
 }
-#section_third .slider_inner .drag_cat button:hover {
+
+button:hover {
   font-weight: bolder;
+  color: var(--color3);
 }
+
 #single_first button {
   position: absolute;
   cursor: pointer;
@@ -180,21 +161,30 @@ figcaption {
 }
 .ingrediens {
   background-color: var(--color9);
-  padding: 30px;
-  margin-bottom: 50px;
+  padding: 50px;
   font-size: 1.1rem;
+  margin-bottom: 30px;
+  list-style: none;
+  display: grid;
+  gap: 2rem;
 }
 .fremgangsmåde {
   background-color: var(--color9);
-  padding: 30px;
+  padding: 50px;
   font-size: 1.1rem;
+  list-style: none;
+  /* line-height: 2.5rem; */
+  display: grid;
+  gap: 2rem;
 }
 .labelOne,
 .labelTwo {
   background-color: var(--color9);
-  padding: 30px 30px 0px 30px;
+  padding: 50px 50px 0px 50px;
   font-size: 1.6rem;
   font-weight: bolder;
+  font-family: monarcha, serif;
+  font-weight: lighter;
 }
 
 /* ------------------SPLASHBILLEDE------------------*/
@@ -341,17 +331,24 @@ figcaption {
   #opskrift {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30px;
+    grid-template-rows: 0.3fr 1fr;
+    grid-column-gap: 50px;
     margin-top: 150px;
   }
 
   .ingrediens {
-    padding: 20px;
     grid-column: 1/2;
     grid-row: 2/3;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    font-size: 1.3rem;
   }
   .fremgangsmåde {
-    padding: 20px;
+    padding-top: 0px;
+  }
+  .labelOne,
+  .labelTwo {
+    font-size: 1.8rem;
   }
 }
 /* ------------------DESKTOP------------------*/
@@ -412,17 +409,20 @@ figcaption {
   #opskrift {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30px;
+    grid-column-gap: 70px;
     margin-top: 100px;
   }
   .ingrediens {
-    padding: 30px 50px 50px 50px;
+    padding: 10px 50px 50px 50px;
+    font-size: 1.5rem;
   }
   .fremgangsmåde {
-    padding: 30px 50px 50px 50px;
+    padding: 10px 50px 50px 50px;
+    font-size: 1.5rem;
   }
   .labelOne,
   .labelTwo {
     padding: 50px 50px 0px 50px;
+    font-size: 2rem;
   }
 }
