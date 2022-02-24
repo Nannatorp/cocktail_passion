@@ -154,13 +154,13 @@ nav.overlay_content ul li {
 /* --------------------------- HEADER MOBIL SLUT -------------------------- */
 
 /* --------------------------- FOOOTER IPAD + DESKTOP START -------------------------- */
-/* 
+
 header {
   background-color: #ffff;
   overflow: hidden;
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   #myNav.overlay {
     height: 20vh;
   }
@@ -180,7 +180,7 @@ header {
     padding-top: 1rem;
     height: 20vh;
   }
-} */
+}  */
 
 @media (min-width: 768px) {
   #myNav.overlay {
@@ -215,10 +215,14 @@ header {
     place-self: start start;
     margin-top: 10px;
   }
-  li {
+
+  /* --KALD ANDET SÅ DET IKKE PÅVIRKER SINGLE------- */
+  /* ------  */
+
+  /* li {
     float: left;
     margin-top: 30px;
-  }
+  } */
 
   .overlay_content ul li a {
     font-size: 25px;
@@ -235,18 +239,23 @@ header {
     visibility: visible;
   }
 
+  /* Mobil forside logo skjul */
   .burger_header {
     visibility: hidden;
     width: 0;
     height: 0;
     margin: 0;
   }
+
+  /* mobil luk knap i burgermenu skjul */
   .overlay .closebtn {
     visibility: hidden;
     width: 0;
     height: 0;
     margin: 0;
   }
+
+  /* mobil åbenknap i burgermenu skjul */
   header span {
     visibility: hidden;
     width: 0;
@@ -254,8 +263,28 @@ header {
     margin: 0;
   }
 
-  .burger_header img {
+  /* mobil logo i åben burger skjul */
+  .burger_logo img {
     visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  /* mobil blade i åben burger skjul */
+  .burger_blade {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  .burgerblad_bottom_container
+    .burgerblad_bottom_sprite {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
   }
 }
 
