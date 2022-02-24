@@ -272,7 +272,6 @@ button:hover {
   /* ---IKONER--- */
   #section_second {
     background-size: 116%;
-    padding-top: 80px;
   }
 
   figcaption {
@@ -416,11 +415,20 @@ button:hover {
     font-size: 1.7rem;
   }
   #section_second .ikoner {
-    max-width: 600px;
-    margin: auto;
+    max-width: 60%;
+  }
+  .ikoner {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+
+  .ikoner div {
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: center;
   }
   .about_os_link {
-    margin: 10px 180px 30px 0px;
+    padding: 10px 180px 30px 0px;
   }
   /* --- KNAPPER kategori desktop--- */
   .drag_cat {
