@@ -154,10 +154,10 @@ nav.overlay_content ul li {
 /* --------------------------- HEADER MOBIL SLUT -------------------------- */
 
 /* --------------------------- FOOOTER IPAD + DESKTOP START -------------------------- */
-
+/* 
 header {
   background-color: #ffff;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 @media (min-width: 1000px) {
@@ -167,7 +167,7 @@ header {
 
   li a {
     font-size: 30px;
-    /* margin: 30px; */
+    margin: 30px;
     font-weight: lighter;
   }
 
@@ -178,9 +178,9 @@ header {
   }
   nav.overlay_content {
     padding-top: 1rem;
-    /* height: 20vh; */
+    height: 20vh;
   }
-}
+} */
 
 @media (min-width: 768px) {
   #myNav.overlay {
@@ -320,7 +320,8 @@ h3 {
   font-weight: lighter;
 }
 
-p {
+p,
+li {
   font-family: degular, sans-serif;
   font-weight: lighter;
 }
