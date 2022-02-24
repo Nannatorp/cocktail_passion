@@ -5,6 +5,12 @@
 }
 
 /* --------------------------- HEADER MOBIL START -------------------------- */
+header {
+  position: sticky;
+  top: 0%;
+  z-index: 2;
+}
+
 .burger_header {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -25,7 +31,11 @@ header span {
 }
 
 header img {
-  width: 90%;
+  width: 50%;
+}
+
+.burger_logo img {
+  width: 80%;
 }
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -130,7 +140,7 @@ ul.nav_right {
   margin-top: 10px;
 }
 .overlay_content {
-  height: 70vh;
+  height: 100%;
   display: grid;
   place-content: center;
 }
@@ -145,8 +155,8 @@ nav.overlay_content ul li {
 }
 .burger_header span img {
   position: fixed;
-  width: 12%;
-  top: 6%;
+  width: 11%;
+  top: 3%;
   z-index: 2;
 }
 
@@ -163,7 +173,6 @@ header {
     padding-left: 0%;
   }
   nav.overlay_content {
-    height: 21vh;
     padding-left: 0;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -189,8 +198,10 @@ header {
     grid-template-columns: 2fr 2fr 2fr;
     width: 100%;
     padding-top: 0%;
-    height: 15vh;
+    height: 12vh;
     padding-left: 23px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   ul {
