@@ -140,7 +140,6 @@ nav.overlay_content ul li {
 .overlay_content ul li a {
   font-size: 30px;
   text-align: center;
-  font-family: monarcha, serif;
   font-weight: lighter;
   margin-bottom: 17px;
 }
@@ -186,7 +185,7 @@ header {
   #myNav.overlay {
     width: 100%;
     position: relative;
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow: hidden; /* Disable horizontal scroll */
   }
 
   .overlay_content {
@@ -194,7 +193,8 @@ header {
     grid-template-columns: 2fr 2fr 2fr;
     width: 100%;
     padding-top: 0%;
-    height: 17vh;
+    height: 15vh;
+    padding-left: 23px;
   }
 
   ul {
@@ -204,36 +204,38 @@ header {
     overflow: hidden;
   }
 
-  .nav_left {
+  ul.nav_left {
     grid-column: 1/2;
     place-self: start end;
     margin-top: 10px;
+    display: flex;
+    gap: 0;
+    padding: 0%;
+    place-self: end;
   }
 
-  .nav_right {
+  ul.nav_right {
     grid-column: 3/4;
     place-self: start start;
     margin-top: 10px;
+    display: flex;
+    gap: 0;
+    padding: 0%;
+    place-self: end start;
   }
 
   /* --KALD ANDET SÅ DET IKKE PÅVIRKER SINGLE------- */
   /* ------  */
 
-  /* li {
-    float: left;
-    margin-top: 30px;
-  } */
-
   .overlay_content ul li a {
     font-size: 25px;
     margin: 20px;
-    font-weight: lighter;
   }
 
   .overlay_content img.desk_logo {
     grid-column: 2/3;
-    place-self: center;
-    width: 100%;
+    place-self: start center;
+    width: 80%;
     height: 100%;
     z-index: 99;
     visibility: visible;
@@ -264,7 +266,7 @@ header {
   }
 
   /* mobil logo i åben burger skjul */
-  .burger_logo img {
+  .burger_logo {
     visibility: hidden;
     width: 0;
     height: 0;
@@ -279,8 +281,38 @@ header {
     margin: 0;
   }
 
-  .burgerblad_bottom_container
-    .burgerblad_bottom_sprite {
+  .burgerblad_top_container {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .burgerblad_top_sprite {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  .burgerblad_bottom_container {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .burgerblad_bottom_sprite {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .burgerblad_right_container {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  .burgerblad_right_sprite {
     visibility: hidden;
     width: 0;
     height: 0;
