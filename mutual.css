@@ -35,7 +35,7 @@ header img {
 }
 
 .burger_logo img {
-  width: 80%;
+  width: 100%;
 }
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -46,7 +46,6 @@ header img {
   right: 0;
   top: 0;
 
-  background-color: #ffff; /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -164,7 +163,12 @@ nav.overlay_content ul li {
 /* --------------------------- FOOOTER IPAD + DESKTOP START -------------------------- */
 
 header {
-  background-color: #ffff;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.67
+  );
   overflow: hidden;
 }
 @media (min-width: 1000px) {
