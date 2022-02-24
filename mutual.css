@@ -8,7 +8,7 @@
 .burger_header {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  margin: 20px;
+  margin: 10px;
 }
 .overlay .closebtn {
   position: absolute;
@@ -25,7 +25,7 @@ header span {
 }
 
 header img {
-  width: 100%;
+  width: 90%;
 }
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -41,6 +41,77 @@ header img {
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
+.logo_container {
+  width: 30%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: 2rem;
+  left: 8rem;
+  z-index: -1;
+}
+
+.logo_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/orange_logo.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.burgerblad_top_container {
+  width: 130%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+  transform: rotate(-1deg);
+  z-index: -2;
+  overflow: hidden;
+}
+
+.burgerblad_top_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blad_top.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.burgerblad_bottom_container {
+  width: 159%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: -8rem;
+  left: -28rem;
+  transform: rotate(112deg);
+  z-index: -2;
+}
+
+.burgerblad_bottom_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blad_bottom.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.burgerblad_right_container {
+  width: 122%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: 21rem;
+  left: 16rem;
+  transform: rotate(279deg);
+  z-index: -2;
+}
+
+.burgerblad_right_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blad_right.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .desk_logo {
   visibility: hidden;
   width: 0%;
@@ -48,23 +119,35 @@ header img {
   margin: 0%;
 }
 
+ul.nav_left {
+  display: grid;
+  gap: 10px;
+  padding-top: 85px;
+}
+ul.nav_right {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
 .overlay_content {
   height: 70vh;
   display: grid;
   place-content: center;
-  padding-top: 40px;
 }
 nav.overlay_content ul li {
   list-style: none;
 }
 .overlay_content ul li a {
   font-size: 30px;
-  text-align: left;
+  text-align: center;
+  font-family: monarcha, serif;
+  font-weight: lighter;
+  margin-bottom: 17px;
 }
 .burger_header span img {
   position: fixed;
   width: 12%;
-  top: 7%;
+  top: 6%;
   z-index: 2;
 }
 
@@ -105,6 +188,7 @@ header {
     position: relative;
     overflow-x: hidden; /* Disable horizontal scroll */
   }
+
   .overlay_content {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;

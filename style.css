@@ -90,8 +90,9 @@ figcaption {
   height: 82%;
 }
 
-.slider button:hover {
+button:hover {
   font-weight: bolder;
+  color: var(--color3);
 }
 
 #single_first button {
