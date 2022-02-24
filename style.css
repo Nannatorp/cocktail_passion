@@ -445,9 +445,10 @@ button:hover {
 
   .beskrivelse {
     max-width: 30ch;
+    font-size: 1.5rem;
   }
 
-  p.beskrivelse {
+  #singleview .drink_txt p.beskrivelse {
     font-size: 1.5rem;
   }
   #opskrift {
