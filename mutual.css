@@ -329,6 +329,7 @@ header {
 /* --------------------------- FOOOTER MOBIL START -------------------------- */
 footer {
   background-color: white;
+  margin-bottom: 20px;
 }
 
 .foot_logo {
@@ -339,7 +340,7 @@ footer {
 }
 
 .foot_logo img {
-  width: 20vh;
+  width: 15vh;
 }
 
 .foot_icon {
@@ -407,14 +408,14 @@ a:hover {
 
 @media (min-width: 1080px) {
   .foot_logo img {
-    width: 35vh;
+    width: 20vh;
   }
   .foot_icon {
-    gap: 50px;
+    gap: 30px;
     margin: 20px;
   }
   .foot_icon img {
-    width: 10vh;
+    width: 5vh;
   }
   .foot_txt {
     gap: 50px;
