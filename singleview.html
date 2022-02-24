@@ -30,8 +30,8 @@
         <!-- Det der popper frem -->
         <article id="opskrift">
           <p class="labelOne"></p>
-          <p class="ingrediens"></p>
-          <p class="labelTwo"></p>
+          <ul class="ingrediens"></ul>
+          <ul class="labelTwo"></ul>
           <p class="fremgangsmåde"></p>
         </article>
       </section>
@@ -96,6 +96,7 @@
         vis();
       }
       function vis() {
+        console.log(drink)
         document.querySelector(".navn").textContent = drink.navn;
         document.querySelector(".kategori").textContent = drink.kategori;
         document.querySelector(".beskrivelse").textContent = drink.beskrivelse;
