@@ -59,25 +59,6 @@ figcaption {
   grid-column: 3/4;
   text-align: center;
 }
-/* .iconblad_top_container {
-  width: 130%;
-  aspect-ratio: 2/3;
-  position: absolute;
-  top: 1rem;
-  left: 5rem;
-  transform: rotate(-1deg);
-  z-index: -2;
-  overflow: hidden;
-}
-
-.iconblad_top_sprite {
-  width: 100%;
-  height: 100%;
-  background-image: url(img/iconblad1.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-} */
-
 /* ----------------KNAPPER DRAGABLE KATEGORI MOBIL-------------- */
 
 .valgt {
@@ -186,6 +167,7 @@ button:hover {
   font-size: 1.1rem;
   margin: 30px 0px 0px 40px;
   padding-bottom: 100px;
+  padding-right: 20px;
 }
 #opskrift {
   margin: 40px;
@@ -208,6 +190,7 @@ button:hover {
   display: grid;
   gap: 2rem;
 }
+
 .labelOne,
 .labelTwo {
   background-color: var(--color9);
@@ -352,14 +335,19 @@ button:hover {
   /* ---SINGLEVIEW--- */
   #singleview {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-template-columns: 2fr 2fr;
     grid-template-rows: auto auto auto;
   }
   #singleview img {
-    grid-column: 1 / 4;
-    grid-row: 1/4;
+    grid-column: 1/2;
   }
-  #singleview .navn {
+  .drink_txt {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+  }
+
+  /* #singleview .navn {
     place-self: end start;
     margin-left: 30px;
   }
@@ -371,7 +359,8 @@ button:hover {
   #singleview .beskrivelse {
     margin: -50px 30px 0px 30px;
     font-size: 1.3rem;
-  }
+  } */
+
   #opskrift {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -390,6 +379,7 @@ button:hover {
   .fremgangsmåde {
     padding-top: 0px;
   }
+
   .labelOne,
   .labelTwo {
     font-size: 1.8rem;
@@ -439,25 +429,22 @@ button:hover {
 
   /* ---SINGLEVIEW--- */
   #singleview {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 2fr;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    height: 100%;
   }
-  #singleview img {
-    grid-column: 1 / 4;
-    grid-row: 1/4;
+
+  #singleview div img {
+    grid-column: 1/2;
+    height: 100%;
   }
-  #singleview .navn {
-    place-self: end start;
-    margin: 50px 50px 0px 70px;
+
+  .drink_txt {
+    place-self: center start;
+    padding: 100px;
   }
-  #singleview .kategori {
-    place-self: start;
-    margin: 0px 50px 0px 70px;
-    font-size: 1.3rem;
-  }
-  #singleview .beskrivelse {
-    margin: -100px 100px 0px 70px;
+
+  .beskrivelse {
+    max-width: 40ch;
   }
   #opskrift {
     display: grid;
