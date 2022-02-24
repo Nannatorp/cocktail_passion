@@ -139,7 +139,7 @@ ul.nav_right {
   margin-top: 10px;
 }
 .overlay_content {
-  height: 100%;
+  height: 70%;
   display: grid;
   place-content: center;
 }
