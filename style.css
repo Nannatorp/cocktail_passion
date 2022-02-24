@@ -4,7 +4,12 @@ h1 {
   text-align: center;
   padding: 20px;
 }
-/* ----------------IKONER-------------- */
+/* ----------------IKONER SEKTION-------------- */
+#section_second {
+  background-image: url(img/backgroundicon.svg);
+  background-size: 116%;
+}
+
 #section_second .ikoner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -54,12 +59,35 @@ figcaption {
   grid-column: 3/4;
   text-align: center;
 }
+/* .iconblad_top_container {
+  width: 130%;
+  aspect-ratio: 2/3;
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+  transform: rotate(-1deg);
+  z-index: -2;
+  overflow: hidden;
+}
+
+.iconblad_top_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/iconblad1.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+} */
+
 /* ----------------KNAPPER DRAGABLE KATEGORI MOBIL-------------- */
 
 .valgt {
   color: var(--color3);
   font-weight: bolder;
-  background: linear-gradient(135deg, rgba(95, 0, 0, 0.14), rgb(251, 242, 242));
+  background: linear-gradient(
+    135deg,
+    rgba(95, 0, 0, 0.14),
+    rgb(251, 242, 242)
+  );
 }
 
 #section_third {
@@ -104,7 +132,10 @@ button:hover {
 /* ----------------SEKTION 3 DRINKS-------------- */
 #cocktail {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  );
   gap: 50px;
   margin: 20px;
 }
@@ -196,12 +227,14 @@ button:hover {
   background-image: url(img/splash.webp);
   background-size: cover;
   background-position: 40%;
-  transform: scale(2); /* Splashbilledet skaleres op med 2 på x og y linjen */
+  transform: scale(
+    2
+  ); /* Splashbilledet skaleres op med 2 på x og y linjen */
 }
 #section_first {
   display: grid; /* Der laves et grid på sektionen, så vi kan placere teksten oven på billedet */
   overflow: hidden;
-  height: 600px;
+  height: 100%;
 }
 
 .splashtxt,
@@ -237,6 +270,10 @@ button:hover {
   }
 
   /* ---IKONER--- */
+  #section_second {
+    background-size: 116%;
+    padding-top: 80px;
+  }
 
   figcaption {
     font-size: 1.5rem;
@@ -247,7 +284,7 @@ button:hover {
   }
 
   .about_os_link {
-    margin: 10px 70px 30px 0px;
+    padding: 10px 70px 30px 0px;
   }
   /* ---KNAPPER kategori tablet--- */
 
@@ -273,9 +310,11 @@ button:hover {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(
+      8,
+      1fr
+    );
     gap: 10px;
-    pointer-events: none;
     transition: 0s ease-in;
   }
 
@@ -285,7 +324,10 @@ button:hover {
     display: flex;
   }
 
-  #section_third .slider_inner .drag_cat button {
+  #section_third
+    .slider_inner
+    .drag_cat
+    button {
     cursor: pointer;
     pointer-events: auto;
     border-radius: 0px;
@@ -300,7 +342,10 @@ button:hover {
     text-transform: uppercase;
   }
 
-  #section_third .slider_inner .drag_cat button:hover {
+  #section_third
+    .slider_inner
+    .drag_cat
+    button:hover {
     font-weight: bolder;
     color: var(--color3);
   }
