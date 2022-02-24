@@ -59,57 +59,41 @@ figcaption {
 .valgt {
   color: var(--color3);
   font-weight: bolder;
-  background: linear-gradient(135deg, rgba(95, 0, 0, 0.14), rgb(251, 242, 242));
+  background: linear-gradient(
+    135deg,
+    rgba(95, 0, 0, 0.14),
+    rgb(251, 242, 242)
+  );
 }
 
 #section_third {
   height: auto;
 }
 .slider {
-  /* position: absolute; */
-  left: 10%;
-  top: 30%;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  background-color: var(---color4);
+  overflow: scroll;
 }
 
 .slider_inner {
-  /* position: absolute; */
-  top: 0%;
-  left: 0%;
-  height: 100%;
-  width: 200%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 1px;
-  pointer-events: none;
-  transition: 0s ease-in;
 }
 
-.drag_cat {
-  height: 100%;
-  padding: 1rem;
-}
-
-#section_third .slider_inner .drag_cat button {
+#section_third .slider button {
   cursor: pointer;
-  pointer-events: auto;
-  border-radius: 50px;
   border: 0.5px solid grey;
   box-shadow: 5px 5px 8px #cfcfcf;
   background-color: white;
-  font-family: degular, sans-serif;
-  font-weight: lighter;
-  font-size: 1.5rem;
-  padding: 20px;
-  /* margin: 5px; */
+  font-size: 1rem;
+  padding: 21px;
+  margin: 5px;
   text-transform: uppercase;
+  height: 82%;
 }
-#section_third .slider_inner .drag_cat button:hover {
+
+.slider button:hover {
   font-weight: bolder;
 }
+
 #single_first button {
   position: absolute;
   cursor: pointer;
@@ -123,7 +107,10 @@ figcaption {
 /* ----------------SEKTION 3 DRINKS-------------- */
 #cocktail {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  );
   gap: 50px;
   margin: 20px;
 }
@@ -283,7 +270,10 @@ figcaption {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(
+      8,
+      1fr
+    );
     gap: 10px;
     pointer-events: none;
     transition: 0s ease-in;
@@ -295,7 +285,10 @@ figcaption {
     display: flex;
   }
 
-  #section_third .slider_inner .drag_cat button {
+  #section_third
+    .slider_inner
+    .drag_cat
+    button {
     cursor: pointer;
     pointer-events: auto;
     border-radius: 0px;
@@ -310,7 +303,10 @@ figcaption {
     text-transform: uppercase;
   }
 
-  #section_third .slider_inner .drag_cat button:hover {
+  #section_third
+    .slider_inner
+    .drag_cat
+    button:hover {
     font-weight: bolder;
     color: var(--color3);
   }
