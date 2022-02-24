@@ -198,7 +198,7 @@ header {
     grid-template-columns: 2fr 2fr 2fr;
     width: 100%;
     padding-top: 0%;
-    height: 12vh;
+    /* height: 12vh; */
     padding-left: 23px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -239,7 +239,7 @@ header {
   .overlay_content img.desk_logo {
     grid-column: 2/3;
     place-self: start center;
-    width: 80%;
+    width: 40%;
     height: 100%;
     z-index: 99;
     visibility: visible;
