@@ -200,32 +200,32 @@ figcaption {
 /* ------------------SPLASHBILLEDE------------------*/
 
 .splashimg {
-  overflow: hidden;
+  overflow: hidden; /* Hvis dele af slpashbilledet stikker ud, "klippes" det væk/vises ikke */
   width: 100%;
   height: 80vh;
   background-image: url(img/splash.webp);
   background-size: cover;
   background-position: 40%;
-  transform: scale(2);
+  transform: scale(2); /* Splashbilledet skaleres op med 2 på x og y linjen */
 }
 #section_first {
-  display: grid;
+  display: grid; /* Der laves et grid på sektionen, så vi kan placere teksten oven på billedet */
   overflow: hidden;
   height: 600px;
 }
 
 .splashtxt,
 .splashimg {
-  grid-area: 1/1;
+  grid-area: 1/1; /* Teksten placeres oven på splashbilledet */
 }
 
 .splashtxt {
-  z-index: 1;
+  z-index: 1; /* Teksten skal placeres foran splashbilledet derfor sætter vi z-index på teksten til 1 */
   text-align: center;
-  justify-self: end;
+  justify-self: end; /* Teksten skal placeres helt til højre på den vertikale linje */
   margin-top: 9rem;
   margin-right: 2.5rem;
-  max-width: 20ch;
+  max-width: 20ch; /* Linje længden på teksten skal være meget kort */
   font-size: 1.3rem;
 }
 
