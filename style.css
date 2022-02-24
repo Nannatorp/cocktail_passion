@@ -59,11 +59,7 @@ figcaption {
 .valgt {
   color: var(--color3);
   font-weight: bolder;
-  background: linear-gradient(
-    135deg,
-    rgba(95, 0, 0, 0.14),
-    rgb(251, 242, 242)
-  );
+  background: linear-gradient(135deg, rgba(95, 0, 0, 0.14), rgb(251, 242, 242));
 }
 
 #section_third {
@@ -108,10 +104,7 @@ button:hover {
 /* ----------------SEKTION 3 DRINKS-------------- */
 #cocktail {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px;
   margin: 20px;
 }
@@ -168,21 +161,30 @@ button:hover {
 }
 .ingrediens {
   background-color: var(--color9);
-  padding: 30px;
+  padding: 50px;
   font-size: 1.1rem;
   margin-bottom: 30px;
+  list-style: none;
+  display: grid;
+  gap: 2rem;
 }
 .fremgangsmåde {
   background-color: var(--color9);
-  padding: 30px;
+  padding: 50px;
   font-size: 1.1rem;
+  list-style: none;
+  /* line-height: 2.5rem; */
+  display: grid;
+  gap: 2rem;
 }
 .labelOne,
 .labelTwo {
   background-color: var(--color9);
-  padding: 30px 30px 0px 30px;
+  padding: 50px 50px 0px 50px;
   font-size: 1.6rem;
   font-weight: bolder;
+  font-family: monarcha, serif;
+  font-weight: lighter;
 }
 
 /* ------------------SPLASHBILLEDE------------------*/
@@ -271,10 +273,7 @@ button:hover {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(
-      8,
-      1fr
-    );
+    grid-template-columns: repeat(8, 1fr);
     gap: 10px;
     pointer-events: none;
     transition: 0s ease-in;
@@ -286,10 +285,7 @@ button:hover {
     display: flex;
   }
 
-  #section_third
-    .slider_inner
-    .drag_cat
-    button {
+  #section_third .slider_inner .drag_cat button {
     cursor: pointer;
     pointer-events: auto;
     border-radius: 0px;
@@ -304,10 +300,7 @@ button:hover {
     text-transform: uppercase;
   }
 
-  #section_third
-    .slider_inner
-    .drag_cat
-    button:hover {
+  #section_third .slider_inner .drag_cat button:hover {
     font-weight: bolder;
     color: var(--color3);
   }
@@ -338,8 +331,8 @@ button:hover {
   #opskrift {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    grid-column-gap: 30px;
+    grid-template-rows: 0.3fr 1fr;
+    grid-column-gap: 50px;
     margin-top: 150px;
   }
 
@@ -348,9 +341,14 @@ button:hover {
     grid-row: 2/3;
     margin-bottom: 0px;
     padding-top: 0px;
+    font-size: 1.3rem;
   }
   .fremgangsmåde {
     padding-top: 0px;
+  }
+  .labelOne,
+  .labelTwo {
+    font-size: 1.8rem;
   }
 }
 /* ------------------DESKTOP------------------*/
@@ -411,17 +409,20 @@ button:hover {
   #opskrift {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30px;
+    grid-column-gap: 70px;
     margin-top: 100px;
   }
   .ingrediens {
     padding: 10px 50px 50px 50px;
+    font-size: 1.5rem;
   }
   .fremgangsmåde {
     padding: 10px 50px 50px 50px;
+    font-size: 1.5rem;
   }
   .labelOne,
   .labelTwo {
     padding: 50px 50px 0px 50px;
+    font-size: 2rem;
   }
 }
