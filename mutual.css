@@ -158,28 +158,24 @@ header {
   background-color: #ffff;
   overflow: hidden;
 }
-
-/* @media (min-width: 1000px) {
-  #myNav.overlay {
-    height: 20vh;
-  }
-
-  li a {
-    font-size: 30px;
-    margin: 30px;
-    font-weight: lighter;
-  }
-
-  nav.overlay_content img {
-    width: 70%;
-    margin: 0%;
-    padding-bottom: 20px;
+@media (min-width: 1000px) {
+  .overlay_content {
+    padding-left: 0%;
   }
   nav.overlay_content {
-    padding-top: 1rem;
-    height: 20vh;
+    height: 21vh;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-}  */
+
+  .overlay_content ul.nav_left {
+    gap: 60px;
+  }
+  .overlay_content ul.nav_right {
+    gap: 60px;
+  }
+}
 
 @media (min-width: 768px) {
   #myNav.overlay {
@@ -223,9 +219,6 @@ header {
     padding: 0%;
     place-self: end start;
   }
-
-  /* --KALD ANDET SÅ DET IKKE PÅVIRKER SINGLE------- */
-  /* ------  */
 
   .overlay_content ul li a {
     font-size: 25px;
