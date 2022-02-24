@@ -444,7 +444,11 @@ button:hover {
   }
 
   .beskrivelse {
-    max-width: 40ch;
+    max-width: 30ch;
+  }
+
+  p.beskrivelse {
+    font-size: 1.5rem;
   }
   #opskrift {
     display: grid;
